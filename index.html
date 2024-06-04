@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>฿ANKIST APP</title>
+</head>
+<body>
+    <header class="header">
+        <p class="greet-msg">Welcome back, User</p>
+        <div class="btns">
+            <button class="theme btn"><ion-icon name="sunny-outline" class="theme-icon"></ion-icon></button>
+            <form class="top-right-btns">
+                <input type="text" class="user btn" placeholder="User" required>
+                <input type="password" class="pin btn" placeholder="PIN" required>
+                <input type="submit" class="send btn" value="→">
+            </form>
+        </div>
+    </header>
+    <div class="curr-bal hide">
+        <p class="text-and-date">
+            <span class="balance-txt">Current balance</span>
+            <span class="date">date: <span class="date-obj"></span></span>
+        </p>
+        <span class="balance">$0.00</span>
+    </div>
+    <main class="bankistApp hide-grid">
+        <section class="movements bankist-movementsUI">
+            <div class="bank-summarry-of-users">
+                <span class="heading">BANKIST CUSTOMERS</span>
+                <p class="customer-0"></p>
+            </div>
+            <div class="movement-UI">
+                <p class="info">
+                    <span class="num-deposits"><span class="deposit-count"> 0 </span><span class="type-deposit">DEPOSIT</span></span>
+                    <span class="dates">x-days ago</span>
+                    <span>
+                        <span class="currency">$</span><span class="figure-deposit">0.00</span>
+                    </span>
+                </p>
+                <p class="info">
+                    <span class="num-widthraws"><span class="widthrawal-count"> 0 </span><span class="type-widthraw">WIDTHRAWAL</span></span>
+                    <span >
+                        <span class="currency">$</span><span class="figure-widtraw">0.00</span>
+                    </span>
+                </p>
+                <p class="info">
+                    <span class="num-transfers"><span class="transfer-count"> 0 </span><span class="type-transfer">TRANSFER</span></span>
+                    <span>
+                        <span class="currency">$</span><span class="figure-transfer">0.00</span>
+                    </span>
+                </p>
+          </div>
+        </section>
+        <aside class="aside">
+            <!-- MAKE TRANSFERS -->
+            <div class="main-action-boxes transfer">
+                <div class="inner-box">
+                    <p class="transfer-label">Transfer</p>
+                    <div class="tr-btns">
+                        <span class="name-txt">
+                            <input type="text" name="txt" id="recipient" class="btn-bg md-width"> <span class="transfer-to">Transfer to</span>
+                        </span>
+                        <span class="amount">
+                            <input type="number" name="num" id="trans-amount" class="btn-bg md-width"><span class="amt-txt">Amount</span>
+                        </span>
+                        <span class="send">
+                            <button class="trig-trans btn-bg arrow">→</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- REQUEST LOAN -->
+            <div class="main-action-boxes loan">
+                <div class="inner-box">
+                    <p class="take-loan">Request loan</p>
+                    <div class="loan-btns">
+                        <span class="amount">
+                            <input type="number" name="num" id="loan-amount" class="btn-bg md-width"><br><span class="amt-txt">Amount</span>
+                        </span>
+                        <span class="send">
+                            <button class="trig-loan btn-bg arrow">→</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- CLOSE ACCOUNT -->
+            <div class="main-action-boxes close">
+                <div class="inner-box">
+                    <p class="close-acc">Close account</p>
+                    <div class="tr-btns">
+                        <span class="name-txt">
+                            <input type="text" name="txt" id="close-name" class="btn-bg md-width"> <span class="transfer-to"> Account name</span>
+                        </span>
+                        <span class="amount">
+                            <input type="password" name="num" id="close-pin" class="btn-bg md-width"><span class="amt-txt">password</span>
+                        </span>
+                        <span class="send">
+                            <button class="trig-delete btn-bg arrow">→</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="hide-grid">
+        <div class="in-out-interest">
+            <p class="in">IN <span class="income inc"><span class="currecy">$</span>0.00</span></p>
+            <p class="out end">OUT <span class="income outc"><span class="currecy">$</span>0.00</span></p>
+            <p class="interest">INTEREST <span class="income intst"><span class="currecy">$</span>0.00</span></p>
+            <select class="sort end">     
+                <option value="none" selected>↓SORT</option>
+                <option value="withrawal">Sort by withrawal</option>
+                <option value="deposit">Sort by deposit</option>
+                <option value="last-modified">Sort by last-modified</option>
+            </select>
+        </div>
+        <p class="auto-logout">You will be logged out in <span class="time">1:00</span></p>
+    </footer>
+    <form class="form">
+        <h2 class="prompt-message">Don't have an account? sign up</h2><br>
+
+        <label for="names">Names: </label>
+        <input type="text" id="names" placeholder="First Middle Last-names"><br><br>
+        <label for="pass">Create Pin: </label>
+        <input type="password" name="password" id="pass"><br><br>
+        <input type="submit" value="Signup" class="signup">
+    </form>
+    <script src="script.js"></script>  
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+    nomodule=""
+    src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>  
+</body>
+</html>
+
+<!-- CODE BY MINTLORD -->
